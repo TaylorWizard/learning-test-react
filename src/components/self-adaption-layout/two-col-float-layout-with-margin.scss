@@ -1,0 +1,40 @@
+@mixin two-col-float-layout-with-margin {
+  h4 {
+    color: #e9511d;
+  }
+  font-size: 1.2rem;
+  font-weight: bold;
+  .box {
+    height: 100px;
+    overflow: hidden;
+    margin: 10px 0;
+    &.right-adaption {
+      div {
+        height: 100%;
+        &.left {
+          float: left;
+          width: 150px;
+          background-color: #cc6699;
+        }
+        &.right {
+          margin-left: 150px;
+          background-color: #45bfe3;
+        }
+      }
+    }
+    &.left-adaption {
+      div {
+        height: 100%;
+        &.left {
+          margin-right: 150px;
+          background-color: #cc6699;
+        }
+        &.right {
+          float: right;
+          width: 150px;
+          background-color: #45bfe3;
+        }
+      }
+    }
+  }
+}

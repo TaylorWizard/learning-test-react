@@ -1,0 +1,40 @@
+@mixin two-col-calc-layout {
+  h4 {
+    color: #e9511d;
+  }
+  font-size: 1.2rem;
+  font-weight: bold;
+  .box {
+    overflow: hidden;
+    height: 100px;
+    margin: 0 0;
+    &.right-adaption {
+      div {
+        float: left;
+        height: 100%;
+        &.left {
+          width: 150px;
+          background-color:  #cc6699;
+        }
+        &.right {
+          background-color: #45bfe3;
+          width: calc(100% - 150px);
+        }
+      }
+    }
+    &.left-adaption {
+      div {
+        float: left;
+        height: 100%;
+        &.left {
+          width: calc(100% - 150px);
+          background-color: #cc6699;
+        }
+        &.right {
+          background-color: #45bfe3;
+          width: 150px;
+        }
+      }
+    }
+  }
+}
