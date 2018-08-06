@@ -1,0 +1,24 @@
+@mixin flex-layout {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  //align-content: flex-end;
+  height: 260px;
+  border: 2px solid #cc6699;
+  .item {
+    height: 100px;
+    //width: 22%;
+    //min-width: 100px;
+    background-color: #45bfe3;
+    //flex-shrink: 1;  //1 default shrink
+    //flex-grow: 0; // 0 default stretching
+    flex: 0 1 auto;
+    flex-basis: 120px;
+    &.member-2 {
+      flex: 0 1 120px;
+      align-self: flex-end;
+      background-color: #cc6699;
+    }
+  }
+}

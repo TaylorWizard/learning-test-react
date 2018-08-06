@@ -1,0 +1,45 @@
+@mixin two-col-absolute-layout-with-margin {
+  h4 {
+    color: #e9511d;
+  }
+  font-size: 1.2rem;
+  font-weight: bold;
+  .box {
+    overflow: hidden;
+    height: 100px;
+    margin: 0 0;
+    position: relative;
+    &.right-adaption {
+      div {
+        height: 100px;
+        &.left {
+          position: absolute;
+          width: 150px;
+          left: 0;
+          top: 0;
+          background-color: #cc6699;
+        }
+        &.right {
+          margin-left: 150px;
+          background-color: #45bfe3;
+        }
+      }
+    }
+    &.left-adaption {
+      div {
+        height: 100px;
+        &.left {
+          margin-right: 150px;
+          background-color: #cc6699;
+        }
+        &.right {
+          position: absolute;
+          width: 150px;
+          right: 0;
+          top: 0;
+          background-color: #45bfe3;
+        }
+      }
+    }
+  }
+}

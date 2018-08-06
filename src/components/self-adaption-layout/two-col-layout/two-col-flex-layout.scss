@@ -1,0 +1,40 @@
+@mixin two-col-flex-layout {
+  h4 {
+    color: #e9511d;
+  }
+  font-size: 1.2rem;
+  font-weight: bold;
+  .box {
+    overflow: hidden;
+    height: 100px;
+    margin: 0 0;
+    display: flex;
+    flex-flow: row nowrap;
+    &.right-adaption {
+      div {
+        height: 100px;
+        &.left {
+          flex: 0 0 150px;
+          background-color: #cc6699;
+        }
+        &.right {
+          flex: auto;
+          background-color: #45bfe3;
+        }
+      }
+    }
+    &.left-adaption {
+      div {
+        height: 100px;
+        &.left {
+          flex: auto;
+          background-color: #cc6699;
+        }
+        &.right {
+          flex: 0 1 150px;
+          background-color: #45bfe3;
+        }
+      }
+    }
+  }
+}

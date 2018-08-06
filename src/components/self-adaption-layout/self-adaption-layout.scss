@@ -1,5 +1,17 @@
-@import './two-col-calc-layout';
-@import './two-col-float-layout-with-margin';
+/*two col layout*/
+@import 'two-col-layout/two-col-calc-layout';
+@import 'two-col-layout/two-col-float-layout-with-margin';
+@import 'two-col-layout/two-col-float-layout-with-bfc';
+@import 'two-col-layout/two-col-absolute-layout-with-margin';
+@import 'two-col-layout/two-col-absolute-layout';
+@import 'two-col-layout/two-col-flex-layout';
+
+/*three col layout*/
+@import 'three-col-adaption-layout/three-col-absolute-layout';
+@import 'three-col-adaption-layout/three-col-flex-layout';
+@import 'three-col-adaption-layout/three-col-float-layout';
+
+@import '../flex-layout/flex-layout';
 
 .self-adaption-layout {
   font-size: 16px;
@@ -17,6 +29,10 @@
       margin-left: 0;
     }
   }
+  .wrap-split {
+    width: auto;
+    display: inline-block;
+  }
 
   .two-col-layout {
     width: 100%;
@@ -26,9 +42,33 @@
     .two-col-float-layout-with-margin {
       @include two-col-float-layout-with-margin;
     }
+    .two-col-float-layout-with-bfc {
+      @include two-col-float-layout-with-bfc;
+    }
+    .two-col-absolute-layout-with-margin {
+      @include two-col-absolute-layout-with-margin;
+    }
+    .two-col-absolute-layout {
+      @include two-col-absolute-layout;
+    }
+    .two-col-flex-layout {
+      @include two-col-flex-layout;
+    }
+    .flex-layout {
+      @include flex-layout;
+    }
   }
 
   .three-col-layout {
-
+    width: 100%;
+    .three-col-absolute-layout {
+      @include three-col-absolute-layout;
+    }
+    .three-col-flex-layout {
+      @include three-col-flex-layout;
+    }
+    .three-col-float-layout {
+      @include three-col-float-layout;
+    }
   }
 }
