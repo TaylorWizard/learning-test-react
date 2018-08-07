@@ -4,6 +4,7 @@ import './App.scss';
 
 // components
 import SelfAdaptionLayout from './components/self-adaption-layout/self-adaption-layout';
+import BoilingVerdict from './components/lifting-state-up/boiling-verdict';
 
 class App extends Component {
     render() {
@@ -16,7 +17,8 @@ class App extends Component {
                 <p className="App-intro">
                     {/*To get started, edit <code>src/App.js</code> and save to reload.*/}
                 </p>
-                <SelfAdaptionLayout name='Self Adaption Layout'/>
+                {/*<SelfAdaptionLayout name='Self Adaption Layout'/>*/}
+                <BoilingVerdict />
             </div>
         );
     }
