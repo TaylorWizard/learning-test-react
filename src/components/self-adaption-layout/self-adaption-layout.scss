@@ -10,6 +10,7 @@
 @import 'three-col-adaption-layout/three-col-absolute-layout';
 @import 'three-col-adaption-layout/three-col-flex-layout';
 @import 'three-col-adaption-layout/three-col-float-layout';
+@import 'three-col-adaption-layout/three-col-grail-layout';
 
 @import '../flex-layout/flex-layout';
 
@@ -69,6 +70,9 @@
     }
     .three-col-float-layout {
       @include three-col-float-layout;
+    }
+    .three-col-grail-layout {
+      @include three-col-grail-layout;
     }
   }
 }

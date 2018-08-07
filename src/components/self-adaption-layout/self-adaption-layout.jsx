@@ -130,6 +130,18 @@ class SelfAdaptionLayout extends Component {
         )
     }
 
+    threeColGrailLayout() {
+        return (
+            <div className="three-col-grail-layout">
+                <div className="box">
+                    <div className="main">main</div>
+                    <div className="left">left</div>
+                    <div className="right">right</div>
+                </div>
+            </div>
+        )
+    }
+
     render() {
         return (
             <div className="self-adaption-layout">
@@ -188,6 +200,10 @@ class SelfAdaptionLayout extends Component {
                         <h2>9.Three Col Float Layout</h2>
                     </div>
                     {(() => this.threeColFloatLayout())()}
+                    <div className="wrap-split">
+                        <h2>10.Three Col Grail Layout</h2>
+                    </div>
+                    {(() => this.threeColGrailLayout())()}
                 </div>
             </div>
         )

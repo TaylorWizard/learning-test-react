@@ -1,0 +1,31 @@
+@mixin three-col-grail-layout {
+  font-size: 1.2rem;
+  font-weight: bold;
+  .box {
+    height: 100px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0 150px;
+    div {
+      height: 100%;
+      position: relative;
+      float:left;
+      &.main {
+        width: 100%;
+        background-color: #cc6699;
+      }
+      &.left {
+        width: 150px;
+        margin-left: -100%;
+        left: -150px;
+        background-color: #45bfe3;
+      }
+      &.right {
+        width: 150px;
+        margin-left: -150px;
+        right: -150px;
+        background-color: #74bb49;
+      }
+    }
+  }
+}
