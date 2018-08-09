@@ -12,19 +12,19 @@
       float:left;
       &.main {
         width: 100%;
-        background-color: #cc6699;
+        background-color: #74bb49;
       }
       &.left {
         width: 150px;
         margin-left: -100%;
         left: -150px;
-        background-color: #45bfe3;
+        background-color: #cc6699;
       }
       &.right {
         width: 150px;
         margin-left: -150px;
         right: -150px;
-        background-color: #74bb49;
+        background-color: #45bfe3;
       }
     }
   }
