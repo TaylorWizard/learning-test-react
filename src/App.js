@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.scss';
 
+
 // components
 import SelfAdaptionLayout from './components/self-adaption-layout/self-adaption-layout';
 import BoilingVerdict from './components/lifting-state-up/boiling-verdict';
@@ -10,6 +11,8 @@ import ListsAndKeys from './components/lists-and-keys/lists-and-keys';
 import Forms from './components/controlled-components/forms';
 import Reservation from './components/controlled-components/reservation';
 import UncontrolledComponents from './components/uncontrolled-components/uncontrolled-components';
+import NoneRouter from './react-router/none-router';
+import ReactRouter from './react-router/react-router';
 
 class App extends Component {
     render() {
@@ -29,6 +32,8 @@ class App extends Component {
                 <Forms />
                 <Reservation />
                 <UncontrolledComponents />
+                {/*<NoneRouter />*/}
+                <ReactRouter />
             </div>
         );
     }
