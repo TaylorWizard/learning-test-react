@@ -1,8 +1,8 @@
 import React from 'react';
 
-import SelfApdationLayout from '../components/self-adaption-layout/self-adaption-layout'
-import BoilingVerdict from '../components/lifting-state-up/boiling-verdict';
-import ListsAndkeys from '../components/lists-and-keys/lists-and-keys';
+import Adaption from '../components/self-adaption-layout/self-adaption-layout';
+import ListsAndKeys from '../components/lists-and-keys/lists-and-keys';
+import UncontrolledComponents from '../components/uncontrolled-components/uncontrolled-components'
 
 class NoneRouter extends React.Component {
     constructor(props) {
@@ -12,34 +12,29 @@ class NoneRouter extends React.Component {
         }
     }
 
-    componentWillMount() {}
-
-    componentDidMount() {
-        window.addEventListener('hashchange', () => {
+    componentWillMount() {
+        window.addEventListener('hashchange', (e) => {
             this.setState({
                 route: window.location.hash.substr(1)
             })
         })
     }
 
-    componentWillUnmount() {}
-
-    componentWillReceiveProps() {}
-
     render() {
         let Child;
-        switch (this.state.route) {
-            case '/layout': Child = SelfApdationLayout; break;
-            case '/temperature': Child = BoilingVerdict; break;
-            default: Child = ListsAndkeys;
+
+        switch(this.state.route) {
+            case '/adaption': Child = Adaption; break;
+            case '/Lists': Child = ListsAndKeys; break;
+            default: Child = UncontrolledComponents;
         }
+
         return (
             <div>
-                <h1>none router</h1>
-                <ul>
-                    <li><a href="#/layout">layout</a></li>
-                    <li><a href="#/temperature">temperature</a></li>
-                </ul>
+                <h4>None React Router</h4>
+                <a href="#/adaption">adaption</a>
+                <br/>
+                <a href="#/Lists">lists</a>
                 <Child />
             </div>
         )

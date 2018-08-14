@@ -18,14 +18,26 @@ class UncontrolledComponents extends React.Component {
         event.preventDefault();
     }
 
+    refCallback(instance) {
+        console.log('emmmmmmm ', instance);
+    }
+
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
                 <label>
                     Name:
-                    <input type="text" ref={this.input}/>
+                    <input
+                        type="text"
+                        ref={this.input}
+                        defaultValue="Hijack"
+                    />
                 </label>
-                <input type="submit" value="Submit"/>
+                <label>
+                    Text:
+                    <input type="text" ref={this.refCallback} />
+                </label>
+                <input type="submit" value="Submit" />
             </form>
         )
     }

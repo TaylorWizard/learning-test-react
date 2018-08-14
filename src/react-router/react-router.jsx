@@ -1,7 +1,7 @@
 import React from 'react';
+
 import {Router, Route, Link } from 'react-router-dom';
 
-// components
 import SelfAdaptionLayout from '../components/self-adaption-layout/self-adaption-layout'
 import BoilingVerdict from '../components/lifting-state-up/boiling-verdict';
 import ListsAndKeys from '../components/lists-and-keys/lists-and-keys';
@@ -30,6 +30,9 @@ class ReactRouter extends React.Component {
             </Router>
         )
      }
+    componentDidMount() {}
+
+    componentDidUpdate() {}
 }
 
 export default ReactRouter;
