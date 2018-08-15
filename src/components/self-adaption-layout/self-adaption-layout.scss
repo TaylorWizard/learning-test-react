@@ -5,6 +5,7 @@
 @import 'two-col-layout/two-col-absolute-layout-with-margin';
 @import 'two-col-layout/two-col-absolute-layout';
 @import 'two-col-layout/two-col-flex-layout';
+@import 'two-col-layout/two-col-calc-with-absolute';
 
 /*three col layout*/
 @import 'three-col-adaption-layout/three-col-absolute-layout';
@@ -54,6 +55,9 @@
     }
     .two-col-flex-layout {
       @include two-col-flex-layout;
+    }
+    .two-col-calc-with-absolute {
+      @include two-col-calc-with-absolute;
     }
     .flex-layout {
       @include flex-layout;

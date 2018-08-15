@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Router, Route, Link } from 'react-router-dom';
+import {Router, Route, Link, BrowserRouter} from 'react-router-dom';
 
 import SelfAdaptionLayout from '../components/self-adaption-layout/self-adaption-layout'
 import BoilingVerdict from '../components/lifting-state-up/boiling-verdict';
@@ -13,7 +13,7 @@ class ReactRouter extends React.Component {
 
      render() {
         return (
-            <Router history>
+            <BrowserRouter>
                 <div>
                     <h1>React Router</h1>
                     <ul>
@@ -24,10 +24,10 @@ class ReactRouter extends React.Component {
                     <hr/>
 
                     <Route exact path="/" component={ListsAndKeys} />
-                    <Route path="temperature" component={BoilingVerdict} />
-                    <Route path="layout" component={SelfAdaptionLayout} />
+                    <Route path="/temperature" component={BoilingVerdict} />
+                    <Route path="/layout" component={SelfAdaptionLayout} />
                 </div>
-            </Router>
+            </BrowserRouter>
         )
      }
     componentDidMount() {}

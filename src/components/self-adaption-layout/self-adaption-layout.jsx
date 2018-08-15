@@ -102,6 +102,14 @@ class SelfAdaptionLayout extends Component {
         )
     }
 
+    twoColCalcWithAbsolute() {
+        return (
+            <div className="two-col-calc-with-absolute">
+                {(() => this.TemplateTwoCol())()}
+            </div>
+        )
+    }
+
     threeColAbsoluteLayout() {
         return (
             <div className="three-col-absolute-layout">
@@ -151,7 +159,7 @@ class SelfAdaptionLayout extends Component {
                 <div className="split"><i>split</i></div>
                 <div className="two-col-layout">
                     <div className="wrap-split">
-                        <h2>1.Two Col Calc Layout</h2>
+                        <h2>1.Two Col Calc Layout With Float</h2>
                         <div className="split inline"><i>split</i></div>
                     </div>
                     {(() => this.twoColCalcLayout())()}
@@ -180,6 +188,11 @@ class SelfAdaptionLayout extends Component {
                         <div className="split inline"><i>split</i></div>
                     </div>
                     {(() => this.twoColFlexLayout())()}
+                    <div className="wrap-split">
+                        <h2>7.Two Col Calc Layout With Absolute</h2>
+                        <div className="split inline"><i>split</i></div>
+                    </div>
+                    {(() => this.twoColCalcWithAbsolute())()}
                     <div className="wrap-split">
                         <h2>---Flex Layout---</h2>
                         <div className="split inline"><i>split</i></div>
