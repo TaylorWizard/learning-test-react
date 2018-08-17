@@ -1,6 +1,5 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.scss';
 
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
@@ -45,7 +44,8 @@ const PageRouterTest = ({ match }) => (
                 {console.log('props: ', props)}
                 <h3>Default Information</h3>
             </div>
-        )}/>
+        )}
+        />
     </div>
 );
 

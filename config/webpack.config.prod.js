@@ -95,7 +95,7 @@ module.exports = {
     // https://github.com/facebookincubator/create-react-app/issues/290
     // `web` extension prefixes have been added for better support
     // for React Native Web.
-    extensions: ['.web.js', '.js', '.json', '.web.jsx', '.jsx'],
+    extensions: ['.web.js', '.js', '.json', '.web.jsx', '.jsx', '.tsx', '.web.tsx'],
     alias: {
       
       // Support React Native Web
@@ -149,6 +149,7 @@ module.exports = {
           /\.(js|jsx)$/,
           /\.less$/,
           /\.css$/,
+          /\.scss$/,
           /\.json$/,
           /\.bmp$/,
           /\.gif$/,
@@ -220,6 +221,39 @@ module.exports = {
                     },
                 },
             ],
+        },{
+            test: /\.scss$/,
+            use: [
+                require.resolve('style-loader'),
+                ({resource}) => ({
+                    loader: 'css-loader',
+                    options: {
+                        importLoaders: 1,
+                        modules: /\.module\.scss/.test(resource),
+                        localIdentName: '[name]__[local]___[hash:base64:5]',
+                    },
+                }),
+                {
+                    loader: require.resolve('postcss-loader'),
+                    options: {
+                        ident: 'postcss', // https://webpack.js.org/guides/migrating/#complex-options
+                        plugins: () => [
+                            require('postcss-flexbugs-fixes'),
+                            autoprefixer({
+                                browsers: [
+                                    '>1%',
+                                    'last 4 versions',
+                                    'Firefox ESR',
+                                    'not ie < 9', // React doesn't support IE8 anyway
+                                ],
+                                flexbox: 'no-2009',
+                            }),
+                        ],
+                    },
+                }, {
+                    loader: require.resolve('sass-loader'),
+                    options: {},
+                }]
         },
       // The notation here is somewhat confusing.
       // "postcss" loader applies autoprefixer to our CSS.
