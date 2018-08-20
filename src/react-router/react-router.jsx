@@ -8,7 +8,8 @@ import ListsAndKeys from '../components/lists-and-keys/lists-and-keys';
 
 class ReactRouter extends React.Component {
     constructor(props) {
-        super(props);
+        super();
+        this.state = {};
     }
 
      render() {
