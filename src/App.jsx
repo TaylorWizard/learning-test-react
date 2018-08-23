@@ -15,6 +15,10 @@ import NoneRouter from './react-router/none-router';
 import ReactRouter from './react-router/react-router';
 import History from './components/history-api/history';
 
+import TreeNode from './tree/tree-node';
+
+import { connect } from 'react-redux';
+
 import pathToRegExp from 'path-to-regexp';
 
 const PageRouterTest = ({ match }) => (
@@ -62,33 +66,34 @@ class App extends Component {
     render() {
         const re = pathToRegExp('/page/:branchId');
         console.log(`re: ${re}`, re.exec('/page/branch1'));
+        console.log(this.props);
         return (
-            <Router>
-                <div className="App">
-                    <header className="App-header">
-                        <img src={logo} className="App-logo" alt="logo"/>
-                        <h1 className="App-title">React Learning</h1>
-                    </header>
-                    <p className="App-intro">
-                        {/*To get started, edit <code>src/App.js</code> and save to reload.*/}
-                    </p>
-                    <ul>
-                        <li><Link to="/">Self Adaption Layout</Link></li>
-                        <li><Link to="/Life">Life And State</Link></li>
-                        <li><Link to="/Boiling">Boiling Verdict</Link></li>
-                        <li><Link to="/Page">Page Router Test</Link></li>
-                    </ul>
+            <div className="App">
+                <header className="App-header">
+                    <img src={logo} className="App-logo" alt="logo"/>
+                    <h1 className="App-title">React Learning</h1>
+                </header>
+                <p className="App-intro">
+                    {/*To get started, edit <code>src/App.js</code> and save to reload.*/}
+                </p>
+                <ul>
+                    <li><Link to="/Layout">Self Adaption Layout</Link></li>
+                    <li><Link to="/Life">Life And State</Link></li>
+                    <li><Link to="/Boiling">Boiling Verdict</Link></li>
+                    <li><Link to="/Page">Page Router Test</Link></li>
+                    <li><Link to="/tree">Tree Node</Link></li>
+                </ul>
 
-                    <hr/>
+                <hr/>
 
-                    <Route exact path="/" component={SelfAdaptionLayout} />
-                    <Route path="/Life" component={LifeAndState} />
-                    <Route path="/Boiling" component={BoilingVerdict} />
-                    <Route path="/Page" component={PageRouterTest} />
-                </div>
-            </Router>
+                <Route path="/Layout" component={SelfAdaptionLayout} />
+                <Route path="/Life" component={LifeAndState} />
+                <Route path="/Boiling" component={BoilingVerdict} />
+                <Route path="/Page" component={PageRouterTest} />
+                <Route path="/tree" component={TreeNode} />
+            </div>
         );
     }
 }
 
-export default App;
+export default connect()(App);

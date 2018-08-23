@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import './index.scss';
@@ -13,7 +14,9 @@ const store = createStore(rootReducer);
 // ReactDOM.render(<App />, document.getElementById('root'));
 ReactDOM.render(
     <Provider store={store}>
-        <ReduxApp />
+        <Router>
+            <Route path="/" component={App} />
+        </Router>
     </Provider>,
     document.getElementById('root')
 );
