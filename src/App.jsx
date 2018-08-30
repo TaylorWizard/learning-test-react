@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 // components
+import VerticalAlign from './components/vertical-align/vertical-align';
 import SelfAdaptionLayout from './components/self-adaption-layout/self-adaption-layout';
 import BoilingVerdict from './components/lifting-state-up/boiling-verdict';
 import LifeAndState from './components/state-and-lifecycle/state-and-lifecycle';
@@ -78,6 +79,7 @@ class App extends Component {
                 </p>
                 <ul>
                     <li><Link to="/Layout">Self Adaption Layout</Link></li>
+                    <li><Link to="/Vertical">Vertical Align</Link></li>
                     <li><Link to="/Life">Life And State</Link></li>
                     <li><Link to="/Boiling">Boiling Verdict</Link></li>
                     <li><Link to="/Page">Page Router Test</Link></li>
@@ -87,6 +89,7 @@ class App extends Component {
                 <hr/>
 
                 <Route path="/Layout" component={SelfAdaptionLayout} />
+                <Route path="/Vertical" component={VerticalAlign} />
                 <Route path="/Life" component={LifeAndState} />
                 <Route path="/Boiling" component={BoilingVerdict} />
                 <Route path="/Page" component={PageRouterTest} />

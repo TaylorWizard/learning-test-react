@@ -1,0 +1,64 @@
+@import 'absolute-negative-margin';
+@import 'absolute-transform';
+@import 'display-vertical-align';
+@import 'flex';
+@import 'flex-column-main-axis';
+@import 'line-height';
+@import 'line-height-vertical-align';
+@import 'margin-auto';
+@import 'padding';
+@import 'percentage-absolute-negative-margin';
+@import 'refer-to-another-ele';
+
+.vertical-align {
+  padding: 30px;
+  border: 3px #74bb49 dashed;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  & > div {
+    margin: 20px 0;
+    width: 20%;
+    height: 240px;
+    min-width: 240px;
+    border: 3px cornflowerblue dashed;
+  }
+  .absolute-negative-margin {
+    @include absoluteNegativeMargin;
+  }
+  .absolute-transform {
+    @include absoluteTransform;
+  }
+  .percentage-absolute-negative-margin {
+    @include percentageAbsoluteNegativeMargin();
+  }
+  .margin-auto {
+    @include absoluteMarginAuto();
+  }
+  .display-vertical-align {
+
+  }
+  .flex {
+
+  }
+  .flex-column-main-axis {
+
+  }
+  .line-height {
+
+  }
+  .line-height-vertical-align {
+
+  }
+
+  .padding {
+
+  }
+
+  .refer-to-another-ele {
+
+  }
+}

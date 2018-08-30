@@ -1,0 +1,13 @@
+@mixin padding() {
+  .box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 100px 0;
+    .child {
+      width: 90%;
+      height: 100px;
+      background-color: #45bfe3;
+    }
+  }
+}
