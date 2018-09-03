@@ -8,7 +8,7 @@
 @import 'margin-auto';
 @import 'padding';
 @import 'percentage-absolute-negative-margin';
-@import 'refer-to-another-ele';
+@import 'reference';
 
 .vertical-align {
   padding: 30px;
@@ -42,7 +42,7 @@
 
   }
   .flex {
-
+    @include flex();
   }
   .flex-column-main-axis {
 
@@ -55,10 +55,11 @@
   }
 
   .padding {
-
+    height: auto;
+    @include padding();
   }
 
-  .refer-to-another-ele {
-
+  .reference {
+    @include reference();
   }
 }

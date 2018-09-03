@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Tpl from './tpl';
+
 import { connect } from 'react-redux';
 import './scss/index.scss';
 
@@ -8,46 +10,11 @@ class VerticalAlign extends React.Component {
         super();
     }
 
-    absoluteNegativeMargin() {
+    padding() {
         return (
             <div className="box">
                 <div className="child">
-                    <p>Absolute</p>
-                    <p>Negative Margin</p>
-                </div>
-            </div>
-        )
-    }
-
-    absoluteTransform() {
-        return (
-            <div className="box">
-                <div className="child">
-                    <p>Absolute</p>
-                    <p>Transform</p>
-                </div>
-            </div>
-        )
-    }
-
-    percentageAbsoluteNegativeMargin() {
-        return (
-            <div className="box">
-                <div className="child">
-                    <p>Percentage</p>
-                    <p>Absolute</p>
-                    <p>Negative Margin</p>
-                </div>
-            </div>
-        )
-    }
-
-    absoluteMarginAuto() {
-        return (
-            <div className="box">
-                <div className="child">
-                    <p>Absolute</p>
-                    <p>Margin Auto</p>
+                    <div>padding</div>
                 </div>
             </div>
         )
@@ -56,28 +23,38 @@ class VerticalAlign extends React.Component {
     render() {
         return (
             <div className="vertical-align">
-                <div className="absolute-negative-margin">
-                    {this.absoluteNegativeMargin()}
-                </div>
-                <div className="absolute-transform">
-                    {this.absoluteTransform()}
-                </div>
-                <div className="percentage-absolute-negative-margin">
-                    {this.percentageAbsoluteNegativeMargin()}
-                </div>
-                <div className="margin-auto">
-                    {this.absoluteMarginAuto()}
-                </div>
+                <Tpl class="absolute-negative-margin">
+                    <p>Absolute</p>
+                    <p>Negative Margin</p>
+                </Tpl>
+                <Tpl class="absolute-transform">
+                    <p>Absolute</p>
+                    <p>Transform</p>
+                </Tpl>
+                <Tpl class="percentage-absolute-negative-margin">
+                    <p>Percentage</p>
+                    <p>Absolute</p>
+                    <p>Negative Margin</p>
+                </Tpl>
+                <Tpl class="margin-auto">
+                    <p>Absolute</p>
+                    <p>Margin Auto</p>
+                </Tpl>
                 <div className="display-vertical-align">
+
                 </div>
-                <div className="flex"></div>
+                <Tpl class="flex">
+                    <div>flex</div>
+                </Tpl>
                 <div className="flex-column-main-axis"></div>
                 <div className="line-height"></div>
                 <div className="line-height-vertical-align"></div>
-                <div className="padding">
-
-                </div>
-                <div className="refer-to-another-ele"></div>
+                <Tpl class="padding">
+                    <div>padding</div>
+                </Tpl>
+                <Tpl class="reference" isShowBase={true}>
+                    <div>reference</div>
+                </Tpl>
             </div>
         )
     }
