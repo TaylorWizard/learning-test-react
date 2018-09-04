@@ -9,9 +9,14 @@ class Tpl extends React.Component {
                     {this.props.isShowBase && (() => (
                         <div className="base"></div>
                     ))()}
-                    <div className="child">
-                        {this.props.children}
-                    </div>
+                    {!this.props.isHideChild && (() => (
+                        <div className="child">
+                            {this.props.children}
+                        </div>
+                    ))()}
+                    {this.props.img && (() => (
+                        <img alt="kitten" src={this.props.source} />
+                    ))()}
                 </div>
             </div>
         )

@@ -39,19 +39,17 @@
     @include absoluteMarginAuto();
   }
   .display-vertical-align {
-
+    @include displayVerticalAlign();
   }
   .flex {
     @include flex();
   }
   .flex-column-main-axis {
-
+    @include flexColumnMainAxis();
   }
-  .line-height {
 
-  }
   .line-height-vertical-align {
-
+    @include lineHeightVerticalAlign();
   }
 
   .padding {
